@@ -29,9 +29,9 @@ jobs:
       # Test one day ?
       
     - name: Pack
-      if: contains(github.ref, 'releases/**')
+      if: contains(github.ref, 'release/**')
       run: dotnet pack -c Release --include-source --no-restore
        
     - name: Publish
-      if: contains(github.ref, 'releases/**')
+      if: contains(github.ref, 'release/**')
       run:  dotnet nuget push **\*.nupkg --api-key  ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json 
