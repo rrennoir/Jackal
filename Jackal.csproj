@@ -4,10 +4,15 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageVersion>0.0.1</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <Title>Jackal</Title>
     <Authors>Ryan Rennoir</Authors>
-    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <Description>Shared memory reader for Assetto Corsa Competizione</Description>
+    <PackageProjectUrl>https://github.com/rrennoir/Jackal</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rrennoir/Jackal</RepositoryUrl>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Jackal.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
