@@ -2,9 +2,9 @@ name: .NET
 
 on:
   push:
-    branches: [ "master", "dev" ]
-  pull_request:
     branches: [ "master" ]
+  pull_request:
+    branches: [ "master", "dev" ]
 
 jobs:
   build:
@@ -27,6 +27,10 @@ jobs:
       
       # Test one day ?
       
+    - name: Pack
+      if: startsWith(github.ref, 'refs/heads/release')
+      run: dotnet pack -c Release --include-source --no-restore
+       
     - name: Publish
       if: startsWith(github.ref, 'refs/heads/release')
-      run:  dotnet nuget push **\*.nupkg --api-key  ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
+      run:  dotnet nuget push **\*.nupkg --api-key  ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json 
