@@ -7,7 +7,7 @@ Shared memory reader for Assetto Corsa Competizione
 ## Example
 
 ```cs
-use Jackal;
+using Jackal;
 
 var reader = new JackalReader();
 
